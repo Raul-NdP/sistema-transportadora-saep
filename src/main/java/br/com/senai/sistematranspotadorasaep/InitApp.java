@@ -7,12 +7,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 
-import br.com.senai.sistematranspotadorasaep.entity.Motorista;
-import br.com.senai.sistematranspotadorasaep.entity.Transportadora;
 import br.com.senai.sistematranspotadorasaep.repository.EntregasRepository;
 import br.com.senai.sistematranspotadorasaep.repository.MotoristasRepository;
 import br.com.senai.sistematranspotadorasaep.repository.TransportadorasRepository;
 import br.com.senai.sistematranspotadorasaep.repository.UsuariosRepository;
+import br.com.senai.sistematranspotadorasaep.view.LoginView;
 
 @SpringBootApplication
 public class InitApp {
@@ -36,6 +35,10 @@ public class InitApp {
 	@Bean
 	public CommandLineRunner commandLineRunner(ApplicationContext ctx) {
 		return args -> {
+			
+			System.setProperty("java.awt.headless", "false");
+			LoginView view = new LoginView();
+			view.setVisible(true);
 			
 			//Transportadora transportadora = new Transportadora();
 			//transportadora.setId(1);
