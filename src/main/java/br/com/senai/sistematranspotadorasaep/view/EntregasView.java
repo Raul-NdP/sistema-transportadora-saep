@@ -1,6 +1,5 @@
 package br.com.senai.sistematranspotadorasaep.view;
 
-import java.awt.EventQueue;
 import java.awt.Font;
 
 import javax.swing.JButton;
@@ -12,8 +11,13 @@ import javax.swing.JTable;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 
-public class EntregasView extends JFrame {
+import org.springframework.stereotype.Component;
 
+@Component
+public class EntregasView extends JFrame {
+	
+	private static final long serialVersionUID = 1L;
+	
 	private JPanel contentPane;
 	private JTable tabelaEntregas;
 	
@@ -27,11 +31,11 @@ public class EntregasView extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblNomeTransportadora = new JLabel("Nome Transportadora");
-		lblNomeTransportadora.setFont(new Font("Tahoma", Font.PLAIN, 20));
-		lblNomeTransportadora.setHorizontalAlignment(SwingConstants.LEFT);
-		lblNomeTransportadora.setBounds(10, 11, 404, 25);
-		contentPane.add(lblNomeTransportadora);
+		JLabel txtNomeTransportadora = new JLabel("Nome Transportadora");
+		txtNomeTransportadora.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		txtNomeTransportadora.setHorizontalAlignment(SwingConstants.LEFT);
+		txtNomeTransportadora.setBounds(10, 11, 404, 25);
+		contentPane.add(txtNomeTransportadora);
 		
 		JButton btnLogout = new JButton("Logout");
 		btnLogout.setFont(new Font("Tahoma", Font.PLAIN, 15));

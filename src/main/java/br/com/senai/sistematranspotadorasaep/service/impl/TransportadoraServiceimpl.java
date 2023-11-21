@@ -1,6 +1,7 @@
 package br.com.senai.sistematranspotadorasaep.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.google.common.base.Preconditions;
 
@@ -8,6 +9,7 @@ import br.com.senai.sistematranspotadorasaep.entity.Transportadora;
 import br.com.senai.sistematranspotadorasaep.repository.TransportadorasRepository;
 import br.com.senai.sistematranspotadorasaep.service.TransportadoraService;
 
+@Service
 public class TransportadoraServiceimpl implements TransportadoraService {
 	
 	@Autowired
